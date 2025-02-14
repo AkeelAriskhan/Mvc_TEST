@@ -19,7 +19,8 @@ namespace WebApplication1.Controllers
                 new Student { Id = 2, Name = "Bob", Age = 22, Course = "Mechanical Engineering" },
                 new Student { Id = 3, Name = "Charlie", Age = 21, Course = "Electrical Engineering" }
             };
-            return View(students);
+            ViewData["Students"] = students;
+            return View();
         }
     }
 }
